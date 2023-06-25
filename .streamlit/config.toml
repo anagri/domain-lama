@@ -1,0 +1,7 @@
+[server]
+port = 8000
+headless = true
+
+[browser]
+serverAddress = domain-lama-production.up.railway.app
+serverPort = 443
