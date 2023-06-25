@@ -76,7 +76,7 @@ with input_container:
         submit_button = st.form_submit_button(label='Send')
 
     if submit_button and user_input:
-        st.write(f"Generating options for '{user_input}'")
+        st.write(f"Generating producthunt listing options for '{user_input}'")
         output = generate_options(user_input)
         st.text(output)
 
