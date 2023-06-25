@@ -1,13 +1,8 @@
 import os, streamlit as st
-from tradier_python import TradierAPI
-
-# Authenticate with the Tradier API
-access_token = os.environ["TRADIER_TOKEN"]
-tradier = TradierAPI(access_token, "sandbox")
 
 # Define a function to get stock quotes
 def get_stock_quote(symbol):
-    quotes = tradier.get_quotes(symbol)
+    quotes = [{"symbol": "AAPL", "last": 130.21}]
     for quote in quotes:
         if quote.symbol == symbol:
             return quote.last
