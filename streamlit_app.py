@@ -5,6 +5,7 @@ import pinecone
 import streamlit as st
 from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain.vectorstores import Pinecone
+from PIL import Image
 
 default_msg = "You are a helpful assistant that suggests creative and unique product names, taglines, categories and domain names to help list on product listing websites like producthunt"
 if 'generated' not in st.session_state:
@@ -62,7 +63,6 @@ def generate_options(query):
 
 # Set up the Streamlit app
 st.set_page_config(
-    layout="wide",
     page_title="Product Lama: Let's make awesome ProductHunt listing for your idea",
     page_icon=":robot_face:"
 )
@@ -79,4 +79,6 @@ with input_container:
         st.write(f"Generating options for '{user_input}'")
         output = generate_options(user_input)
         st.text(output)
-        
+
+image = Image.open('product-lama.png')
+st.image(image, caption='Let the Lama guide you to your perfect producthunt listing', use_column_width=True)
