@@ -1,6 +1,9 @@
 [server]
-port=8000
+port=80
 headless=true
+enableCORS=false
+enableWebsocketCompression=false
+enableXsrfProtection=false
 
 [browser]
 serverAddress="domain-lama-production.up.railway.app"
