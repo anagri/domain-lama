@@ -4,8 +4,8 @@ import os, streamlit as st
 def get_stock_quote(symbol):
     quotes = [{"symbol": "AAPL", "last": 130.21}]
     for quote in quotes:
-        if quote.symbol == symbol:
-            return quote.last
+        if quote['symbol'] == symbol:
+            return quote['last']
     return None
 
 # Set up the Streamlit app
