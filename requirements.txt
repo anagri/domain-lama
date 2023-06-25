@@ -1,1 +1,8 @@
 streamlit==1.22.0
+cohere==4.11.2
+streamlit-chat==0.1.0
+unstructured==0.7.8
+pinecone-client==2.2.2
+openai==0.27.8
+tiktoken==0.4.0
+pinecone-client[grpc]==2.2.2
