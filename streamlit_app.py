@@ -55,7 +55,7 @@ def generate_options(query):
     messages = [
         {"role": "system", "content": default_msg},
         {"role": "user", "content": f"here are few of the most popular and related listings on producthunt related to the idea:\n{example_prompt}"},
-        {"role": "user", "content": f"generate 5 listing options for idea below:"},
+        {"role": "user", "content": f"generate 5 listing options each containing product name, tagline, categories and domain name for idea below:"},
         {"role": "user", "content": query}
     ]
     response = query_openai(messages)
