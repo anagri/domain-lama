@@ -109,7 +109,7 @@ st.markdown('<h1 style="text-align:center">Product Lama</h1>', unsafe_allow_html
 input_container = st.container()
 with input_container:
     with st.form(key='chat_form', clear_on_submit=True):
-        user_input = st.text_input("Idea:", key='input', placeholder='Uber for vetenerians')
+        user_input = st.text_input("Idea:", key='input', placeholder='search through your documents using semantic search')
         col1, col2 = st.columns([1,1])
         with col1:
             submit_button = st.form_submit_button(label='Send')
